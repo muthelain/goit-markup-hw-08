@@ -1,0 +1,45 @@
+.clients__list {
+    flex-wrap: wrap;
+    gap: var(--element-gap);
+}
+
+.clients__item {
+    flex-grow: 1;
+    min-width: 130px;
+
+    @include mobile {
+    flex-basis: calc((100% - 30px) / 2);
+    }
+
+    @include tablet {
+    flex-basis: calc((100% - 60px) / 3);
+    }
+
+    @include desktop {
+        flex-wrap: nowrap;
+    flex-basis: calc((100% - 150px) / 6);
+    }
+}
+
+.clients__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 92px;
+    border: 1px solid #afb1b8;
+    border-radius: 4px;
+    color: #afb1b8;
+    transform: scale(1);
+    transition: border var(--transition), color var(--transition), transform var(--transition);
+
+    &:hover,
+    &:focus {
+        border: 1px solid var(--accent-color);
+        color: var(--accent-color);
+        transform: scale(1.1);
+    }
+}
+
+.clients__icon {
+    fill: currentColor;
+}

@@ -1,0 +1,187 @@
+.subscribe {
+    width: 100%;
+}
+
+.subscribe__form {
+    @include desktop {
+        display: flex;
+    }
+}
+
+.subscribe__input {
+    width: 100%;
+
+    @include tablet {
+        width: 450px;
+    }
+
+    @include desktop {
+        width: 358px;
+    }
+        margin-bottom: 20px;
+    height: 50px;
+    padding: 15px;
+    background-color: transparent;
+    color: var(--text-color-secondary);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+    transition: border var(--transition);
+
+    &:focus {
+        border: 1px solid #2196f3;
+        outline: none;
+    }
+}
+
+.subscribe__button {
+    position: relative;
+    padding: 10px 62px 10px 29px;
+
+    @include desktop {
+        margin-left: 12px;
+        width: 200px;
+        height: 50px;
+    }
+}
+
+.subscribe__icon {
+    position: absolute;
+    top: 13px;
+    right: 28px;
+}
+
+// MODAL FORM
+
+.lead__label {
+    display: block;
+    font-size: 12px;
+    line-height: 1.17;
+    letter-spacing: 0.01em;
+    color: #757575;
+
+    &+& {
+        margin-top: 10px;
+    }
+}
+
+.lead__input {
+    position: relative;
+    display: block;
+}
+.lead__input:focus~.lead__icon,
+.lead__input:hover~.lead__icon {
+    fill: var(--accent-color);
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+.lead__icon {
+    position: absolute;
+    top: 11px;
+    left: 12px;
+    transition: fill var(--transition);
+
+    .lead__text:focus+& {
+        fill: var(--accent-color);
+    }
+        .lead__text:hover+& {
+            fill: var(--accent-color);
+        }
+}
+
+.lead__text {
+    display: block;
+    margin-top: 4px;
+    padding: 11px;
+    padding-left: 42px;
+    width: 100%;
+    height: 40px;
+    color: #000;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    transition: border var(--transition);
+
+    &::placeholder {
+        font-size: 14px;
+        line-height: 1.14;
+        letter-spacing: 0.01em;
+        color: rgba(117, 117, 117, 0.5);
+    }
+
+    &:focus {
+        border: 1px solid #2196f3;
+        outline: none;}
+
+    &:hover {
+            border: 1px solid #2196f3;
+            outline: none;
+    }
+}
+
+.lead__text__input:focus ~ .lead__icon,
+.lead__text__input:hover ~ .lead__icon {
+    fill: var(--accent-color);
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+    outline: none;
+}
+
+
+
+.lead__text--textarea {
+    resize: none;
+    min-height: 120px;
+    overflow: auto;
+    padding: 12px 16px;
+}
+
+.lead__policy {
+    position: relative;
+    display: block;
+    max-width: 425px;
+    margin: 20px auto 30px;
+    padding-left: 24px;
+    font-size: 12px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: #757575;
+
+    @include desktop {
+        font-size: 14px;
+    }
+}
+
+.lead__agreement {
+    color: var(--accent-color);
+}
+
+.lead__checkbox {
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    margin: -1px;
+}
+
+.lead__icon-check {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translateY(-50%);
+    border: 2px solid var(--title-color);
+    border-radius: 2px;
+    transition: background-color var(--transition), border var(--transition);
+    cursor: pointer;
+
+    .lead__checkbox:checked+& {
+        background-color: var(--accent-color);
+        border: 2px solid var(--accent-color);
+        outline: none;
+    }
+}

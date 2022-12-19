@@ -1,0 +1,59 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: var(--title-color);
+    background-color: var(--primary-bcg-color);
+    padding-top: 60px;
+@media screen and (min-width: 768px) {
+    padding-top: 80px;
+    }
+}
+
+.title {
+    margin-bottom: 30px;
+    font-size: 28px;
+    line-height: 1.17;
+    text-align: center;
+    letter-spacing: 0.03em;
+    color: var(--title-color);
+
+    @include desktop {
+        margin-bottom: 50px;
+        font-size: 36px;
+    }
+}
+
+.strong {
+    display: block;
+    margin-bottom: 20px;
+
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: var(--text-color-secondary);
+}
+
+.section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    @include desktop {
+        padding-top: 94px;
+        padding-bottom: 94px;
+    }
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
